@@ -1,0 +1,17 @@
+{
+  "name": "@aegis/database",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "migrate": "wrangler d1 migrations apply aegis-edu-db --local",
+    "migrate:prod": "wrangler d1 migrations apply aegis-edu-db --remote",
+    "seed": "tsx src/seed.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "wrangler": "^3.50.0",
+    "tsx": "^4.7.0"
+  }
+}
